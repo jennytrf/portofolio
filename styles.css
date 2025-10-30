@@ -1,1 +1,36 @@
+:root{
+--bg: #f7f7fb;
+--card: #ffffff;
+--text: #111827;
+--muted: #6b7280;
+--accent: #2563eb;
+}
 
+
+[data-theme='dark']{
+--bg: #0b1220;
+--card: #0f1724;
+--text: #e6eef8;
+--muted: #9aa4b2;
+--accent: #60a5fa;
+}
+
+
+*{box-sizing:border-box}
+body{font-family: 'Inter', system-ui, sans-serif; margin:0; background:var(--bg); color:var(--text); line-height:1.6}
+.container{max-width:1000px; margin:0 auto; padding:2rem}
+.hero{padding:4rem 0; text-align:center}
+.avatar{width:120px; height:120px; border-radius:999px; object-fit:cover; display:block; margin:0 auto 1rem}
+.name{color:var(--accent)}
+.cta{display:inline-block; margin-top:1rem; background:var(--accent); color:white; padding:0.6rem 1rem; border-radius:8px; text-decoration:none}
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem}
+.card{background:var(--card); padding:1rem; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.08)}
+.card img{width:100%; height:140px; object-fit:cover; border-radius:8px}
+.links{margin-top:0.6rem}
+.links a{margin-right:0.6rem; text-decoration:none; color:var(--accent)}
+label{display:block; margin-bottom:0.6rem}
+input, textarea{width:100%; padding:0.6rem; border-radius:8px; border:1px solid #e6e9ef; background:transparent}
+button[type=submit]{background:var(--accent); color:white; padding:0.6rem 1rem; border-radius:8px; border:0}
+.site-footer{padding:1rem 0; text-align:center; color:var(--muted)}
+#theme-toggle{position:fixed; right:1rem; top:1rem; background:transparent; border:0; font-size:1.2rem; cursor:pointer}
+@media (max-width:600px){ .container{padding:1rem} .avatar{width:96px; height:96px} }
